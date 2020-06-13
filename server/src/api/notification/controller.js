@@ -9,8 +9,8 @@ export const whatsapp = async ({ bodymen: { body: { number, message } } }, res, 
   try {
     response = await client.messages.create({
       body: message,
-      to: `whatsapp:+${number}`,  // Text this number
-      from: process.env.TWILIO_WHATSAPP_SENDER // From a valid Twilio number
+      to: `whatsapp:+${number}`,
+      from: process.env.TWILIO_WHATSAPP_SENDER
     })
   } catch (e) {
     console.log("error sendWhatsApp: ", e)
