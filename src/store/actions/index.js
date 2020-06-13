@@ -1,0 +1,3 @@
+export {
+    getHeartBeat
+} from './heartBeat'
