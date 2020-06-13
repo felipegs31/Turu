@@ -6,6 +6,7 @@ import {
 import Icon from 'react-native-vector-icons/Ionicons'
 import ProgressCircle from 'react-native-progress-circle'
 import LottieView from 'lottie-react-native'
+import Colors from '../../constants/Colors';
 
 function useInterval(callback, delay) {
   const savedCallback = useRef();
@@ -27,12 +28,17 @@ function useInterval(callback, delay) {
   }, [delay]);
 }
 
+function randomInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 const HeartBeat = (props) => {
   const [heartBeat, setHeartBeat] = useState(64)
   const [percent, setPercent] = useState(0)
 
   useInterval(() => {
-    setHeartBeat(heartBeat + Math.floor(Math.random() * 8) - 4)
+    const rand = randomInteger(-1,1);
+    setHeartBeat(heartBeat + rand)
     setPercent(Math.floor(100*heartBeat/160))
   }, 2000);
 
@@ -41,9 +47,9 @@ const HeartBeat = (props) => {
       <ProgressCircle
         percent={percent}
         radius={160}
-        borderWidth={8}
-        color="#3399FF"
-        shadowColor="#999"
+        borderWidth={15}
+        color={Colors.primary}
+        shadowColor="#FFF"
         bgColor="#000"
       >
         <View style={styles.display}>
@@ -62,7 +68,7 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#000'
+    backgroundColor: Colors.secondary
   },
   display: {
     display: 'flex',
