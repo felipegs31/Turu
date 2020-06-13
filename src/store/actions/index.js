@@ -1,3 +1,0 @@
-export {
-    getHeartBeat
-} from './heartBeat'
