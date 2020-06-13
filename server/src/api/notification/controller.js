@@ -1,5 +1,6 @@
 import httpStatus from 'http-status'
 import twilio from 'twilio'
+import totalvoice from 'totalvoice-node'
 
 export const whatsapp = async ({ bodymen: { body: { number, message } } }, res, next) => {
   var client = new twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN)
@@ -11,14 +12,21 @@ export const whatsapp = async ({ bodymen: { body: { number, message } } }, res, 
       to: `whatsapp:+${number}`,  // Text this number
       from: process.env.TWILIO_WHATSAPP_SENDER // From a valid Twilio number
     })
-    console.log("chegou response: ", response)
   } catch (e) {
-    console.log("dei erro: ", e)
+    console.log("error sendWhatsApp: ", e)
   }
 
   res.status(httpStatus.OK).json(response)
 }
 
-export const callCCR = async ({ body }, res, next) => {
-  res.status(httpStatus.OK).json({ ok: 'ok' })
+export const callCCR = async ({ bodymen: { body: { number, message } } }, res, next) => {
+  const client = new totalvoice(process.env.TOTAL_VOICE_ACCESS_TOKEN)
+  let response = {}
+  const options = { velocidade: 1, tipo_voz: "br-Vitoria" }
+  try {
+    response = await client.tts.enviar(number, message, options)
+  } catch (e) {
+    console.log("erro callTTS", e)
+  }
+  res.status(httpStatus.OK).json(response)
 }
