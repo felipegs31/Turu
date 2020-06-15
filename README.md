@@ -49,8 +49,7 @@ TOTAL_VOICE_ACCESS_TOKEN=<token>
 ````
 ## APP
 
-![Screenshot](app_home.jpeg)
-![Screenshot](app_drawer.jpeg)
+<img src="app_home.jpeg" width="425"/> <img src="app_drawer.jpeg" width="425"/> 
 
 O aplicativo foi desenvolvido em React Native para mobilidade entra os sistemas operacionais iOS e Android
 
