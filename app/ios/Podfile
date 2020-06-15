@@ -32,7 +32,7 @@ def add_flipper_pods!(versions = {})
   pod 'FlipperKit/FlipperKitLayoutTextSearchable', versions['Flipper'], :configuration => 'Debug'
   pod 'FlipperKit/FlipperKitNetworkPlugin', versions['Flipper'], :configuration => 'Debug'
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
-
+  pod 'react-native-ble-plx', :path => '../node_modules/react-native-ble-plx'
 end
 
 # Post Install processing for Flipper
