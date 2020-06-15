@@ -1,5 +1,7 @@
 # Turu App!
 
+O Turu app é uma solução de baixo custo para captação dos batimentos cardíacos de motoristas de caminhão e, com ele você nao precisa de wearables, apenas dos items listados abaixo
+
 Neste repositório você encontrará todos os códigos desenvolvidos para o funcionamento do **Turu App**. O projeto é dividido em 3 partes, sendo elas:
 
  1. **Hardware**
@@ -46,6 +48,9 @@ TWILIO_WHATSAPP_SENDER=<sender>
 TOTAL_VOICE_ACCESS_TOKEN=<token>
 ````
 ## APP
+
+![Screenshot](app_home.jpeg)
+![Screenshot](app_drawer.jpeg)
 
 O aplicativo foi desenvolvido em React Native para mobilidade entra os sistemas operacionais iOS e Android
 
