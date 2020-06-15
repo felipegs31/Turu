@@ -29,8 +29,9 @@ Para o servidor, utilizamos a linguagem **Javascript**, com o framework **NodeJS
 Foi utilizado o Twillio para envar mensages para o whatsapp e o TotalVoice para fazer ligações e foi hospedamos o BE na AWS para os testes (utilizamos o Elastic Beanstalk)
 
 Para rodar o backend:
-`npm i `
-`npm start`
+
+ - `npm i ` 
+ - `npm start`
 
 Criar um arquivo .env com as seguintes variáveis:
 
@@ -49,10 +50,11 @@ TOTAL_VOICE_ACCESS_TOKEN=<token>
 O aplicativo foi desenvolvido em React Native para mobilidade entra os sistemas operacionais iOS e Android
 
 para executar o app:
-`npm i`
-`cd ios && pod install`
-`react-native run-ios`
-`react-native run-android`
+
+ - `npm i` 
+ - `cd ios && pod install` 
+ - `react-native run-ios` 
+ - `react-native   run-android`
 
 Com o app rodando, emparelhar com o bluetooh do Arduino
 
