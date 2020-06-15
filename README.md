@@ -8,7 +8,7 @@ Neste repositório você encontrará todos os códigos desenvolvidos para o func
 
 A arquitetura geral do sistema, pode ser entendida através desta imagem:
 
-*                     Inserir imagem**
+![Screenshot](arquitetura.jpeg)
 # Hardware
 
 Materiais:
